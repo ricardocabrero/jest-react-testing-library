@@ -1,0 +1,29 @@
+.normal {
+   cursor: pointer;
+   user-select: none;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: calc(100% - 4rem);
+   padding: 0 2rem;
+   margin-bottom: 1rem;
+   margin: 0 auto;
+   max-width: 46rem;
+}
+
+@media (max-width:600px) {
+   .normal {
+      width: calc(100% - 3rem);
+      padding: 0 1.5rem;
+   }
+}
+
+.normal:hover {
+   background: #eeee;
+}
+.completed  > p{
+   text-decoration: line-through;  
+}
+.completed:hover {
+   background: inherit;
+}
