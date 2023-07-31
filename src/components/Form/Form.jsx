@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
 import { useState } from "react"
 import { actionAdd } from '../../reducers/taskReducer';
 import { useSelector, useDispatch } from 'react-redux';
+import styles from './Form.module.scss';
 
 export default function Form() {
 
@@ -42,7 +42,7 @@ export default function Form() {
 
    return(
       <>
-         {isRepeatMessage && <p>This item already exists.</p>}
+         {isRepeatMessage && <p className={styles.advise}>This item already exists.</p>}
          <form onSubmit={handleSubmit}>
             <input onChange={handleChange} value={inputValue} type="text" placeholder="task..." autoComplete="off"/>
             <button type="submit">Send</button>
