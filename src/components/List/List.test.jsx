@@ -28,7 +28,7 @@ describe('List component', () => {
       expect(screen.getByText(initialState.tasks.length)).toBeInTheDocument();
    });
 
-   test('when all the tasks have property x equal to true, the text "Tasks completed!"', () => {   
+   test('when all the tasks have property x equal to true, the text "Task/s completed!"', () => {   
       const mockStore = configureMockStore();
       const initialState = {
          tasks: [
@@ -47,7 +47,7 @@ describe('List component', () => {
       const listItem = screen.getByRole('listitem'); 
       fireEvent.click(listItem);
 
-      expect(screen.getByText('Tasks completed!')).toBeInTheDocument();
+      expect(screen.getByText('Task completed!')).toBeInTheDocument();
 
    });
 

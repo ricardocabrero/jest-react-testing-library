@@ -21,7 +21,7 @@ describe('Form Component', () => {
 
       render(
          <Provider store={store}>
-            <Form handleIsRepeat={() => {}}/>
+            <Form/>
          </Provider>
       );
 

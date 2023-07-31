@@ -18,9 +18,13 @@ export default function List() {
       dispatch(actionToggleSelect(Number(e.currentTarget.id)));
    } 
 
+   function literalPlural(tasks) {
+      return (tasks.length > 1) ? 's' : '';
+   }
+
    return (
       <>
-         <p>{tasks.length}{tasks.length && tasks.every(task => task.completed === true) ? <strong>&nbsp;Tasks completed!</strong> : undefined}</p>
+         <p>{tasks.length}{tasks.length && tasks.every(task => task.completed === true) ? <strong>&nbsp;{`Task${literalPlural(tasks)} completed!`}</strong> : undefined}</p>
          <ul className={styles.list}>
             {tasks.map(({name, id, completed}) => {
                return( 
